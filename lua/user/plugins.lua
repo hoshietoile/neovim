@@ -63,6 +63,8 @@ return packer.startup(function(use)
   -- ColorScheme
   use "lunarvim/colorschemes"
   use "folke/tokyonight.nvim"
+  use "ellisonleao/gruvbox.nvim"
+  use "Shatur/neovim-ayu"
 
   -- Completions
   use "hrsh7th/nvim-cmp"    -- Completion
