@@ -86,6 +86,15 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- lsp dianostics and code actions
   use "glepnir/lspsaga.nvim"
 
+  -- Utilities
+  use "windwp/nvim-autopairs"
+  use "tpope/vim-endwise"
+  use "tpope/vim-commentary"
+  use "tpope/vim-surround"
+  use "folke/todo-comments.nvim"
+  use "junegunn/vim-easy-align"
+  use "simeji/winresizer"
+
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
