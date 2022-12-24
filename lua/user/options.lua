@@ -47,3 +47,4 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]]
 vim.cmd [[set signcolumn=yes]]
+vim.cmd [[set clipboard+=unnamedplus]]
