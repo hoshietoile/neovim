@@ -26,6 +26,7 @@ local options = {
   shiftwidth = 2,
   tabstop = 2,
   cursorline = true,
+  cursorcolumn = true,
   number = true,
   relativenumber = false,
   numberwidth = 4,
@@ -45,3 +46,4 @@ end
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]]
+vim.cmd [[set signcolumn=yes]]
