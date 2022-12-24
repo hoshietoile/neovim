@@ -43,7 +43,7 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim"    -- implementation of popup api from vim in neovim
   use "nvim-lua/plenary.nvim"  -- common utilities
 
-  use "9mm/vim-closer"
+  -- use "9mm/vim-closer"
   use {
     "tpope/vim-dispatch",
     opt = true,
@@ -59,6 +59,9 @@ return packer.startup(function(use)
     run = "cd app && yarn install",
     cmd = "MarkdownPreview",
   }
+
+  use "lunarvim/colorschemes"  -- ColorScheme
+  use "folke/tokyonight.nvim"
 
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
