@@ -60,8 +60,20 @@ return packer.startup(function(use)
     cmd = "MarkdownPreview",
   }
 
-  use "lunarvim/colorschemes"  -- ColorScheme
+  -- ColorScheme
+  use "lunarvim/colorschemes"
   use "folke/tokyonight.nvim"
+
+  -- Completions
+  use "hrsh7th/nvim-cmp"    -- Completion
+  use "hrsh7th/cmp-buffer"  -- buffer completions 
+  use "hrsh7th/cmp-path"    -- path completions
+  use "hrsh7th/cmp-cmdline" -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip" --- snippet completions
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip"    -- snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
