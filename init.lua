@@ -7,3 +7,4 @@ require "user.lsp"
 
 require "user.autopairs"
 require "user.todo-comments"
+require "user.treesitter"

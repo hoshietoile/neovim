@@ -95,6 +95,12 @@ return packer.startup(function(use)
   use "junegunn/vim-easy-align"
   use "simeji/winresizer"
 
+  -- Treesitter
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
