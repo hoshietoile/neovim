@@ -120,6 +120,13 @@ return packer.startup(function(use)
   -- Lualine
   use "hoob3rt/lualine.nvim"
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+  use "airblade/vim-gitgutter"
+  use "akinsho/git-conflict.nvim"
+  use "sindrets/diffview.nvim"
+  use "tpope/vim-fugitive"
+
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()

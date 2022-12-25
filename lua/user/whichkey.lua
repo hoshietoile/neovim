@@ -120,6 +120,14 @@ local mappings = {
 		name = "Terminal",
 		n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
 	},
+
+	g = {
+		name = "Git",
+		H = { "<cmd>GitGutterLineHighlightsEnable<cr>", "Enable Highlignt" },
+		h = { "<cmd>GitGutterLineHighlightsDisable<cr>", "Disable Highlignt" },
+		D = { "<cmd>DiffviewOpen<cr>", "Open GitDiffview" },
+		d = { "<cmd>DiffviewClose<cr>", "Close GitDiffview" },
+	},
 }
 
 local vopts = {
