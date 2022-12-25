@@ -112,6 +112,12 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope-file-browser.nvim"
   use "BurntSushi/ripgrep"
 
+  -- Tree
+  -- TODO: Replace with other tree browser tool
+  use "scrooloose/nerdtree"
+  use "ryanoasis/vim-devicons"
+
+
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()

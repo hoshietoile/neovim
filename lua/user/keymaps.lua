@@ -65,4 +65,3 @@ keymap("n", "ga", "<Plug>(EasyAlign)", opts)
 
 -- Which Key
 keymap("n", "?", "<cmd>WhichKey<CR>", opts)
-

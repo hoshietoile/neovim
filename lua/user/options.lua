@@ -48,3 +48,7 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set formatoptions-=cro]]
 vim.cmd [[set signcolumn=yes]]
 vim.cmd [[set clipboard+=unnamedplus]]
+
+-- NERDTree
+vim.cmd [[autocmd TabNew * call timer_start(0, { -> execute('NerdTree') })]]
+vim.cmd [[autocmd VimEnter * execute 'NERDTree']]
