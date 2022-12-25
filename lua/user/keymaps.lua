@@ -24,21 +24,14 @@ keymap("n", "sv", ":vsplit<Return><C-w>w", term_opts)
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Window navigations
-keymap("n", "<Space>", "<C-w>w", opts)
-keymap("", "s<left>", "<C-w>h", opts)
-keymap("", "s<up>", "<C-w>k", opts)
-keymap("", "s<down>", "<C-w>j", opts)
-keymap("", "s<right>", "<C-w>l", opts)
+-- NOTE: Deleted because which-key warns.
+-- `Your <leader> key for "n" mode in buf 0 is currently mapped to "<C-W>w".
+-- WhichKey automatically cretes triggers, so please remove the mapping.`
+-- keymap("", "<Space>", "<C-w>w", opts)
 keymap("", "sh", "<C-w>h", opts)
 keymap("", "sk", "<C-w>k", opts)
 keymap("", "sj", "<C-w>j", opts)
 keymap("", "sl", "<C-w>l", opts)
-
--- Resize window
-keymap("n", "<C-w><left>", ":resize -2<CR>", opts)
-keymap("n", "<C-w><right>", ":resize +2<CR>", opts)
-keymap("n", "<C-w><up>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-w><down>", ":vertical resize +2<CR>", opts)
 
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
@@ -69,3 +62,6 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Plugins
 keymap("x", "ga", "<Plug>(EasyAlign)", opts)
 keymap("n", "ga", "<Plug>(EasyAlign)", opts)
+
+-- Which Key
+keymap("n", "?", "<cmd>WhichKey<CR>", opts)

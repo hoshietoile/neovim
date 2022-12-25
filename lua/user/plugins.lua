@@ -104,6 +104,9 @@ return packer.startup(function(use)
   -- Terminal
   use "akinsho/toggleterm.nvim"
 
+  -- Which key
+  use "folke/which-key.nvim"
+
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
