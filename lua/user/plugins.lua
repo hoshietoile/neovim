@@ -107,6 +107,11 @@ return packer.startup(function(use)
   -- Which key
   use "folke/which-key.nvim"
 
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  use "nvim-telescope/telescope-file-browser.nvim"
+  use "BurntSushi/ripgrep"
+
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
