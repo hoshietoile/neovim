@@ -117,6 +117,8 @@ return packer.startup(function(use)
   use "scrooloose/nerdtree"
   use "ryanoasis/vim-devicons"
 
+  -- Lualine
+  use "hoob3rt/lualine.nvim"
 
   -- Automatically setup the configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
