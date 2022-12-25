@@ -6,19 +6,18 @@ end
 todo.setup({
 	signs = true, -- show icons
 	sign_priority = 8,
-	-- TODO: apply icons
 	keywords = {
 		FIX = {
-			icon = "F",
+			icon = " ",
 			color = "error",
 			alt = { "FIXME", "BUG", "FIXIT", "ISSUE" },
 		},
-		TODO = { icon = "T", color = "info" },
-		HACK = { icon = "H", color = "warning" },
-		WARN = { icon = "W", color = "warning", alt = { "WARNING", "XXX" } },
-		PERF = { icon = "P", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
-		NOTE = { icon = "N", color = "hint", alt = { "INFO" } },
-		TEST = { icon = "T", color = "info", alt = { "TESTING", "PASSED", "FAILED" } },
+		TODO = { icon = "פֿ", color = "info" },
+		HACK = { icon = " ", color = "warning" },
+		WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+		PERF = { icon = " ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+		NOTE = { icon = " ", color = "hint", alt = { "INFO" } },
+		TEST = { icon = "ﭧ", color = "info", alt = { "TESTING", "PASSED", "FAILED" } },
 	},
 	gui_style = {
 		fg = "NONE",

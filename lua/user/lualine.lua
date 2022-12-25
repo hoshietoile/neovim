@@ -10,8 +10,8 @@ end
 local diagnostics = {
 	"diagnostics",
 	sources = { "nvim_diagnostic" },
-	sections = { "error", "warn" },
-	symbols = { error = "Er", warn = "Wr" },
+	sections = { "error", "warn", "info", "hint" },
+	symbols = { error = " ", warn = " ", info = " ", hint = " " },
 	colored = false,
 	updated_in_insert = false,
 	always_visible = true,
@@ -21,9 +21,9 @@ local diff = {
 	"diff",
 	colored = false,
 	symbols = {
-		added = "Ad",
-		modified = "Md",
-		removed = "Rm",
+		added = " ",
+		modified = " ",
+		removed = " ",
 	},
 	cond = hide_in_width,
 }
@@ -44,7 +44,7 @@ local filetype = {
 local branch = {
 	"branch",
 	icons_enabled = true,
-	icon = "Br",
+	icon = "",
 }
 
 local location = {
@@ -55,7 +55,7 @@ local location = {
 local progress = function()
 	local current_line = vim.fn.line(".")
 	local total_lines = vim.fn.lines("$")
-	local chars = { "0%", "10%", "20%", "30%", "40%", "50%", "60%", "80%", "100%" }
+	local chars = { "__", "▁▁", "▂▂", "▃▃", "▄▄", "▅▅", "▆▆", "▇▇", "██" }
 	local line_ratio = current_line / total_lines
 	local index = math.ceil(line_ratio * #chars)
 	return chars[index]
@@ -65,28 +65,25 @@ local spaces = function()
 	return "spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
 end
 
--- FIXME: apply icons to:
 lualine.setup({
 	options = {
 		icons_enable = true,
 		theme = "auto",
 		component_separators = {
-			left = "",
-			right = "",
+			left = "",
+			right = "",
 		},
 		section_separators = {
-			left = "",
-			right = "",
+			left = "",
+			right = "",
 		},
 		disabled_filetypes = {},
 		sections = {
 			lualine_a = {
-        -- "branch"
         branch,
         diagnostics,
       },
 			lualine_b = {
-        -- "mode"
         mode,
       },
 			lualine_c = {
@@ -95,26 +92,15 @@ lualine.setup({
 				path = 0,
 			},
 			lualine_x = {
-				-- { "diagnostics", sources = { "nvim_diagnostic" } },
-				-- symbols = {
-				-- 	error = "E",
-				-- 	warn = "W",
-				-- 	Info = "I",
-				-- 	hint = "H",
-				-- },
-
 				diff,
 				spaces,
 				"encoding",
-				-- "filetype",
         filetype,
 			},
 			lualine_y = {
-        -- "progress"
         progress,
       },
 			lualine_z = {
-        -- "location"
         location
       },
 		},

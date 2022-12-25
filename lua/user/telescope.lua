@@ -9,9 +9,8 @@ local fb_actions = require("telescope").extensions.file_browser.actions
 
 telescope.setup({
 	defaults = {
-		-- TODO: apply icons
-		-- propmpt_prefix = "",
-		-- selection_caret = "",
+		propmpt_prefix = " ",
+		selection_caret = " ",
 		path_display = { "smart" },
 		file_ignore_patterns = {
 			"^node_modules/",

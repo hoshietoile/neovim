@@ -22,10 +22,9 @@ local setup = {
 		},
 	},
 	key_labels = {},
-	-- TODO: apply icons
 	icons = {
-		breadcrumb = ">>",
-		separator = "⇒",
+		breadcrumb = "»",
+		separator = "➜",
 		group = "+",
 	},
 	popup_mappings = {
