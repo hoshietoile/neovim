@@ -111,9 +111,13 @@ local mappings = {
 		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
 		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
 		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-		R = { "<cmd>Telescope registers<cr>", "Registers" },
+		-- R = { "<cmd>Telescope registers<cr>", "Registers" },
 		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
 		C = { "<cmd>Telescope commands<cr>", "Commands" },
+    -- R = { "<cmd>lua require('telescope.builtin').find_files({no_ignore=false,hidden=true})<cr>" }
+    -- FIXME: not work with shortcut...
+    --        ref: https://github.com/nvim-lua/wishlist/issues/18
+    R = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false })<cr><C-q><cr>", "Replace" }
 	},
 
 	t = {
@@ -127,6 +131,8 @@ local mappings = {
 		h = { "<cmd>GitGutterLineHighlightsDisable<cr>", "Disable Highlignt" },
 		D = { "<cmd>DiffviewOpen<cr>", "Open GitDiffview" },
 		d = { "<cmd>DiffviewClose<cr>", "Close GitDiffview" },
+    F = { "<cmd>DiffviewFileHistory<cr>", "Open FileHistory" },
+    f = { "<cmd>DiffviewFileHistory %<cr>", "Open FileHistoryInCurrentFile" },
 	},
 }
 

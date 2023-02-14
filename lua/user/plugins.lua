@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim"
   use "ellisonleao/gruvbox.nvim"
   use "Shatur/neovim-ayu"
+  use "Everblush/nvim"
 
   -- Completions
   use "hrsh7th/nvim-cmp"    -- Completion
